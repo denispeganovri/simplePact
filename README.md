@@ -1,7 +1,4 @@
-# SamplePact
-
-PactFlow link:
-https://pen.pactflow.io/overview/provider/Provider/consumer/Client (the contracts storage)
+# SimplePact
 
 Generate/update a contract:
 1. cd pkg/client
