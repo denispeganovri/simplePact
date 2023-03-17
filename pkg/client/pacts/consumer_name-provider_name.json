@@ -1,0 +1,92 @@
+{
+  "consumer": {
+    "name": "Consumer name"
+  },
+  "provider": {
+    "name": "Provider name"
+  },
+  "interactions": [
+    {
+      "description": "A request to provider",
+      "providerState": "Test name",
+      "request": {
+        "method": "GET",
+        "path": "/endpoint",
+        "headers": {
+          "Content-Type": "application/json; charset=utf-8"
+        },
+        "matchingRules": {
+          "$.path": {
+            "match": "regex",
+            "regex": "\\/endpoint"
+          },
+          "$.headers.Content-Type": {
+            "match": "regex",
+            "regex": "application\\/json"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json; charset=utf-8"
+        },
+        "body": {
+          "dimensions": {
+            "height": 1.1,
+            "length": 1.1,
+            "uom": "string",
+            "width": 1.1
+          },
+          "last_updated_date": "string",
+          "mass": 1.1,
+          "mass_uom": "string",
+          "sku_id": 1.1,
+          "volume": 1.1,
+          "volume_uom": "string"
+        },
+        "matchingRules": {
+          "$.headers.Content-Type": {
+            "match": "regex",
+            "regex": "application\\/json"
+          },
+          "$.body.dimensions.height": {
+            "match": "type"
+          },
+          "$.body.dimensions.length": {
+            "match": "type"
+          },
+          "$.body.dimensions.uom": {
+            "match": "type"
+          },
+          "$.body.dimensions.width": {
+            "match": "type"
+          },
+          "$.body.last_updated_date": {
+            "match": "type"
+          },
+          "$.body.mass": {
+            "match": "type"
+          },
+          "$.body.mass_uom": {
+            "match": "type"
+          },
+          "$.body.sku_id": {
+            "match": "type"
+          },
+          "$.body.volume": {
+            "match": "type"
+          },
+          "$.body.volume_uom": {
+            "match": "type"
+          }
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "pactSpecification": {
+      "version": "2.0.0"
+    }
+  }
+}
