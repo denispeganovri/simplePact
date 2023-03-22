@@ -11,7 +11,7 @@ Install pact https://github.com/pact-foundation/pact-go#installation
 1. cd contract/pkg/client
 2. go test
 
-2# Run a local server (provider):
+#2 Run a local server (provider):
 1. cd contract/cmd/server
 2. go run main.go
 
